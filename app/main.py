@@ -8,7 +8,7 @@ from app.data.database import engine
 TaskModel.Base.metadata.create_all(bind=engine)
 
 origins = ["http://localhost:3000",
-           "react-to-do-pu31dlsjb-single-page.vercel.app"]
+           "https://react-to-do-pu31dlsjb-single-page.vercel.app"]
 
 app = FastAPI()
 app.add_middleware(CORSMiddleware, allow_origins=origins,
