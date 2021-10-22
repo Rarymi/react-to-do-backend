@@ -16,7 +16,8 @@ SQLALCHEMY_DATABASE_URL = "mysql+pymysql://{}:{}@{}:{}/{}?charset=utf8mb4".forma
     SQLALCHEMY_DATABASE_DBNAME
 )
 
-engine = create_engine(SQLALCHEMY_DATABASE_URL)
+engine = create_engine(
+    'mysql://b59d42804a0a0c:684d3aba@us-cdbr-east-04.cleardb.com:3306/heroku_05f8632f076a9b3?reconnect=true')
 
 SessionLocal = sessionmaker(autocommit=False, autoflush=False, bind=engine)
 
