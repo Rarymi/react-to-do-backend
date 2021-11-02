@@ -8,9 +8,10 @@ from app.data.database import engine
 TaskModel.Base.metadata.create_all(bind=engine)
 
 origins = ["http://localhost:3000",
-           "react-to-do-13ak5zfll-single-page.vercel.app/", "https://react-to-do-13ak5zfll-single-page.vercel.app/"]
+           "https://react-to-do-seven.vercel.app"]
 
 app = FastAPI()
 app.add_middleware(CORSMiddleware, allow_origins=origins,
                    allow_methods=["*"], allow_headers=["*"])
+
 app.include_router(TaskController.router)
